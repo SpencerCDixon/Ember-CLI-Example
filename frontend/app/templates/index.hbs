@@ -1,4 +1,11 @@
 <h3> Index route </h3>
+
+<form {{action "createTweet" on="submit"}}>
+  {{input value=newTweet.description}}
+
+  <button {{action "createTweet" newTweet}}>Create Tweet</button>
+</form>
+
 <ul>
   {{#each tweet in model}}
     <li>{{tweet.description}}</li>
